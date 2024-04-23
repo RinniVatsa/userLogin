@@ -8,7 +8,6 @@ const LoginForm = ({ onLogin }) => {
         e.preventDefault();
 
         onLogin({ email, password });
-        // Clear the login form fields after submission
         setEmail('');
         setPassword('');
     };
@@ -16,36 +15,57 @@ const LoginForm = ({ onLogin }) => {
     return ( <
         div className = "login-form" >
         <
-        h2 > Signin to your account < /h2> <
-        form onSubmit = { handleLogin } >
+        h3 > Signin to your account < /h3>  <form onSubmit={handleLogin}> 
+
         <
-        label >
-        Email:
+        div className = "mb-3" >
         <
+        label > Email address < /label> <
         input type = "email"
-        value = { email }
         onChange = {
             (e) => setEmail(e.target.value)
         }
-        required /
+        required className = "form-control"
+        placeholder = "Enter email" /
         >
         <
-        /label> <
-        label >
-        Password:
+        /div> <
+        div className = "mb-3" >
         <
+        label > Password < /label> <
         input type = "password"
-        value = { password }
+        className = "form-control"
         onChange = {
             (e) => setPassword(e.target.value)
         }
-        required /
+        required placeholder = "Enter password" /
         >
         <
-        /label> <
-        button type = "submit" > Login < /button> < /
-        form > <
-        /div>
+        /div> <
+        div className = "mb-3" >
+        <
+        div className = "custom-control custom-checkbox" >
+        <
+        input type = "checkbox"
+        className = "custom-control-input"
+
+        id = "customCheck1" /
+        >
+        <
+        label className = "custom-control-label"
+        htmlFor = "customCheck1" > Remember me < /label> < /
+        div > <
+        /div> <
+        div className = "d-grid" >
+        <
+        button type = "submit"
+        className = "btn btn-primary" > Submit < /button> < /
+        div > <
+        p className = "forgot-password text-right" >
+        Forgot < a href = "#" > password ? < /a> < /
+        p > <
+        /form>< /
+        div >
     );
 };
 
