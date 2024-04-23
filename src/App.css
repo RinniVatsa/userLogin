@@ -5,7 +5,7 @@
     right: 0;
     height: 100%;
     overflow-y: scroll;
-    background-image: url('/Users/apple/Desktop/userapp/src/Images/img.png');
+    background-image: url('./Images/img.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -22,7 +22,7 @@
     width: 350px;
     padding: 20px;
     justify-content: center;
-    border: 1px solid #ccc;
+    border: 1px solid #bebebe;
     border-radius: 5px;
     margin-top: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
